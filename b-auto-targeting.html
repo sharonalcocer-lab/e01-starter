@@ -45,11 +45,11 @@
         {
           continue;
         }
-        // Keep the earliest enemy if two have equal health.
-          if (target && target.health > enemy.health) {
-          continue;
+        // Replace target if there isn't one yet, or if this enemy has more or equal health.
+          if (!target || enemy.health >= target.health) {
+            target = enemy;
           }
-          target = enemy;
+          
       }
       return target;
     }
