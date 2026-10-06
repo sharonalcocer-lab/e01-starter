@@ -23,7 +23,6 @@
       { label: "Stack", tiles: [{ x: 135, y: 55, color: "#248a87" }, { x: 175, y: 80, color: "#e6a23c" }, { x: 215, y: 105, color: "#6555aa" }]}
     ];
     let layoutIndex = 0;
-    const options = { experimentalShadows: false };
 
     function drawTile(x, y, color) {
       ctx.fillStyle = color;
@@ -38,9 +37,7 @@
       layout.tiles.forEach(tile => {
         drawTile(tile.x, tile.y, tile.color);
       });
-      // If options.experimentalShadows, try drawing a fancy second pass later.
-      // ctx.shadowBlur = 12;
-      // ctx.shadowColor = "#ffffff";
+      
     }
 
     document.querySelector("#change").addEventListener("click", () => {
